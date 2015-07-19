@@ -302,8 +302,8 @@
         background: transparent url('../images/footerBg2.png') repeat-x;
         border-top: 1px #161616 solid;
         position: fixed;
-        /*bottom: -70px;*/
-        bottom: 0;
+        bottom: -70px;
+        /*bottom: 0;*/
         padding: 0 40px;
     }
 
