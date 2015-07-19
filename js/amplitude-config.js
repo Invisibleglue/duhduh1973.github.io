@@ -3,23 +3,40 @@
  */
 
 Amplitude.init({
-    "songs": [
-        {
-            "name": "Muddy Shoes",
-            "url": "http://www.invisibleglue.com/audio/Muddy%20Shoes.mp3",
-            "cover_art_url": "http://www.invisibleglue.com/images/muddyshoes.jpg"
-        },
-        {
-            "name": "The Silence Got So Loud",
-            "url": "http://www.invisibleglue.com/audio/The%20Silence%20Got%20So%20Loud.mp3",
-            "cover_art_url": "http://www.invisibleglue.com/images/silence.jpg"
-        },
-        {
-            "name": "Way Out Way Out",
-            "url": "http://www.invisibleglue.com/audio/Way%20Out%20Way%20Out.mp3",
-            "cover_art_url": "http://www.invisibleglue.com/images/wayout.jpg"
-        }
-    ],
+    "songs": [{
+        "name": "Muddy Shoes",
+        "url": "http://invisibleglue.com/audio/Muddy%20Shoes.mp3",
+        "cover_art_url": "http://www.invisibleglue.com/images/muddyshoes.jpg"
+    }, {
+        "name": "The Silence Got So Loud",
+        "url": "http://invisibleglue.com/audio/The%20Silence%20Got%20So%20Loud.mp3",
+        "cover_art_url": "http://www.invisibleglue.com/images/silence.jpg"
+    }, {
+        "name": "Way Out Way Out",
+        "url": "http://invisibleglue.com/audio/Way%20Out%20Way%20Out.mp3",
+        "cover_art_url": "http://www.invisibleglue.com/images/wayout.jpg"
+    }, {
+        "name": "Illusion Denied",
+        "url": "http://invisibleglue.com/audio/Illusion%20Denied.mp3"
+    }, {
+        "name": "Dissatisfaction Guaranteed",
+        "url": "http://invisibleglue.com/audio/Dissatisfaction%20Guaranteed.mp3"
+    }, {
+        "name": "Take My Hand",
+        "url": "http://invisibleglue.com/audio/Take%20My%20Hand.mp3"
+    }, {
+        "name": "Delusion Campaign",
+        "url": "http://invisibleglue.com/audio/Delusion%20Campaign.mp3"
+    }, {
+        "name": "Breathe It In",
+        "url": "http://invisibleglue.com/audio/Breathe%20It%20In.mp3"
+    }, {
+        "name": "Burn or Be Burned",
+        "url": "http://invisibleglue.com/audio/Burn%20Or%20Be%20Burned.mp3"
+    }, {
+        "name": "Shadow Shapes",
+        "url": "http://invisibleglue.com/audio/Shadow%20Shapes.mp3"
+    }],
     "debug": true,
     "callbacks": {
         "after_play": "active_play",
@@ -46,7 +63,9 @@ function active_play (){
 function active_pause (){
     var $ = jQuery;
     $('#playIcon').removeClass('fa-pause').addClass('fa-play');
+    //noinspection JSJQueryEfficiency
     $('.playList li').not('.amplitude-active-song-container').removeClass('activeSong');
+    //noinspection JSJQueryEfficiency
     $('.playList li').fadeTo(200, 1);
     console.log('PAUSED');
 }
