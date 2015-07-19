@@ -11,10 +11,20 @@ $('.playList li').on('click', function () {
 
 
 
-$('ul.playList li').hover(function() {
-    $(this).find('.hideBoxHide').show('drop', {direction: 'up'}, 150);
-},function(){
-    $(this).find('.hideBoxHide').delay(500).hide('drop', {direction: 'up'}, 150);
+$('.playList li').on('click', function() {
+    $(this).find('.hideBoxHide').show('slide',{direction: 'up'}, 'fast');
+    $('.playList li').not(this).find('.hideBoxHide').hide();
+});
+
+$('.playList li .hideBoxHide .download').on('click', function () {
+    event.stopPropagation();
+    $(this).css({'opacity': 0.2});
+});
+
+
+
+$('.download a').attr( "href", function() {
+    return "http://invisibleglue.com/audio/" + this.title + ".mp3";
 });
 
 //$('.playAnim').load('/BootSnippetTest/lyrics.html #loaded');

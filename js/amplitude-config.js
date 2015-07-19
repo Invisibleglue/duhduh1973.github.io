@@ -43,7 +43,6 @@ Amplitude.init({
         "after_pause": "active_pause",
         "after_next": "active_next",
         "after_prev": "active_prev"
-
     }
 });
 

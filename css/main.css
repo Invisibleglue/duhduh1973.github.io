@@ -132,13 +132,37 @@
         color: #CFCFCF;
         flex: 1 1 content;
     }
-    .fa-facebook {
-        width: 13px;
-        height: 14px;
+
+    .social .fa-lg, .social .fa-square, .download .fa-lg, .download .fa-square, .download .fa-stack-2x, .download .fa-2x {
+        font-size: 1.7em;
     }
-    .social .fa-facebook:hover {
+    .fa-stack, .fa-lg, .fa-stack-1x, .fa-facebook {
+        height: 1.7em;
+    }
+    .social .fa-stack {
+        font-size: 1.1em;
+        color: #3b5998;
+    }
+    .social .fa-facebook {
+        color: #fff;
+        margin-left: 3px;
+        margin-top: 1px;
+    }
+    .download .fa-stack {
+        font-size: 1.1em;
+        color: #580309;
+    }
+    .download .fa-download {
+        color: #CFCFCF;
+        margin-left: 2px;
+        margin-top: 1px;
+    }
+    .fa-download:hover, .fa-facebook:hover {
         color: #ffffff;
-        background-color: #46629d;
+        text-shadow: 0 0 10px #fff;
+    }
+    .fa-stack:hover {
+        text-shadow: 0 0 10px #fff;
     }
     .download {
         flex: 1 1 content;
@@ -147,19 +171,10 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        height: 20px;
     }
     .hideBoxHide {
-        /*display: none;*/
-    }
-
-    .fa-download, .fa-file-text {
-        flex: 0 1 content;
-        color: #CFCFCF;
-        padding: 0 10px;
-    }
-
-    .fa-download:hover, .fa-file-text:hover {
-        text-shadow: 0 0 5px #fff;
+        display: none;
     }
 
     button {
