@@ -11,7 +11,11 @@ $('.playList li').on('click', function () {
 
 
 
-//$('ul.playList li').hasClass('.amplitude-active-song-container').addClass('.activeSong');
+$('ul.playList li').hover(function() {
+    $(this).find('.hideBoxHide').show('drop', 'down');
+},function(){
+    $(this).find('.hideBoxHide').hide('drop', 'down');
+});
 
 //$('.playAnim').load('/BootSnippetTest/lyrics.html #loaded');
 //$('#loaded').css({'opacity': 1});

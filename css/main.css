@@ -107,7 +107,7 @@
         box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.9);
         list-style-type: none;
         color: #9397ff;
-        padding: 7px 25px;
+        padding: 7px 15px 7px 25px;
         text-align: left;
         cursor: pointer;
     }
@@ -122,11 +122,26 @@
         justify-content: space-between;
         align-content: center;
         align-items: center;
-        padding-right: 15px;
+        /*padding-right: 5px;*/
     }
 
     .title {
-        flex: 2 1 auto;
+        flex: 2 1 content;
+    }
+    .social {
+        color: #CFCFCF;
+        flex: 1 1 content;
+    }
+    .download {
+        flex: 1 1 content;
+    }
+    .hideBox {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .hideBoxHide {
+        display: none;
     }
 
     .fa-download, .fa-file-text {
