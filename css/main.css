@@ -373,3 +373,7 @@
     border: 1px #ffffff solid;
     /*background: transparent url("../images/table-bg.png");*/
 }
+
+.ytPlaceholder {
+    padding-top: 10%;
+}
