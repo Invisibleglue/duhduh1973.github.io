@@ -182,6 +182,9 @@ span.amplitude-current-minutes {
     padding: 0 30px;
     margin: 0;
 }
+.songTime {
+    border: 1px solid #ff081b;
+}
 .currTime, .durTime {
     flex: 0 1 content;
     min-width: 51px;
