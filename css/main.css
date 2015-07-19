@@ -183,7 +183,7 @@ span.amplitude-current-minutes {
     margin: 0;
 }
 .songTime {
-    border: 1px solid #ff081b;
+    display: flex;
 }
 .currTime, .durTime {
     flex: 0 1 content;
@@ -194,7 +194,7 @@ span.amplitude-current-minutes {
     font-weight: 600;
     font-size: 1.2em;
     letter-spacing: 1.7px;
-    border: 1px solid #ffffff;
+
 }
 
 #timeColon {
@@ -207,7 +207,6 @@ span.amplitude-current-minutes {
     text-shadow: .3px 0px 1px #939393;
     padding-right: 3px;
     margin-left: -12px;
-    border: 1px solid #ffffff;
 }
 .videoCenter {
     min-height: 300px;
