@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>GLUE</title>
+		<meta charset="UTF-8">
+		<meta name=description content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Bootstrap CSS -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One|Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Poller+One|Fjalla+One'
+			  rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/main.css"/>
+		<link rel="stylesheet" href="css/scrollingNavbar.css"/>
+	</head>
+	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-vide-bg="images/theater">
+
+       <nav class="navbar navbar-inverse navbar-fixed-top page-scroll">
+       	<a class="navbar-brand page-scroll" href="#page-top"><h4 class="logo">invisible glue</h4></a>
+       	<ul class="nav navbar-nav navbar-right">
+       		<li>
+				<a class="page-scroll" href="#music">MUSIC</a>
+       		</li>
+       		<li>
+				<a class="page-scroll" href="#band">BAND</a>
+       		</li>
+       	</ul>
+       </nav>
+		<section id="home" class="home">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+					<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+						<!-- 16:9 aspect ratio -->
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe width="1280" height="720" src="http://www.youtube.com/embed/X-dMOvEOQiM?loop=1&amp;autoplay=1&amp;showinfo=0&amp;vq=hd720&amp;rel=0&amp;autohide=1&amp;controls=0&amp;fs=0&amp;iv_load_policy=3&amp;modestbranding=1"></iframe>
+						</div>
+					</div>
+					<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+				</div>
+			</div>
+		</section>
+
+	   	<section id="music" class="music">
+			<div class="container">
+				<div class="row musicBox">
+					<div class="playAnim col-xs-8 col-sm-8 col-md-8 col-lg-8">
+						<div id="amplitude-visualization"></div>
+						<!--<img id="defaultAnim" src="images/seal.png" class="img-responsive"		 alt="Dissatisfaction Guaranteed">-->
+					</div>
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 gutter">
+						<ul class="playList">
+							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="0">Muddy Shoes</li>
+							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="1">The Silence Got So Loud</li>
+							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="2">Way Out Way Out</li>
+							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="3">Song 5</li>
+							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="4">Song 5</li>
+							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="5">Song 5</li>
+							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="6">Song 5</li>
+							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="7">Song 5</li>
+							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="8">
+								<div class="title">Burn Or Be Burned</div>
+							</li>
+							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="9">
+								<div class="title">Shadow Shapes</div>
+								<div class="download"><i class="fa fa-file-text"></i></i></div>
+								<div class="download"><i class="fa fa-download"></i></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="band" class="band">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<h1>SUCK IT!</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+        <footer class="footer">
+			<div class="borderTest transport">
+				<span class="fa-stack fa-square fa-2x amplitude-next">
+				  <i class="fa fa-square fa-stack-2x"></i>
+				  <i id="backIcon" class="fa fa-backward fa-stack-1x fa-inverse"></i>
+				</span>
+				<span class="fa-stack fa-square fa-2x amplitude-play-pause amplitude-paused" amplitude-main-play-pause="true">
+				  <i class="fa fa-square fa-stack-2x"></i>
+				  <i id="playIcon" class="fa fa-play fa-stack-1x fa-inverse"></i>
+				</span>
+				<span class="fa-stack fa-square fa-2x amplitude-prev">
+				  <i class="fa fa-square fa-stack-2x"></i>
+				  <i id="forwardIcon" class="fa fa-forward fa-stack-1x fa-inverse"></i>
+				</span>
+			</div>
+			<div class="borderTest statusBar">
+				<div class="amplitude-song-time-visualization amplitude-song-time-visualization-fill" amplitude-single-song-time-visualization="true"></div>
+			</div>
+			<div class="borderTest songTitle">
+				<h3 amplitude-song-info="name"></h3>
+			</div>
+			<!--<div class="songTime">-->
+				<div class="borderTest currTime">
+					<span class="amplitude-current-minutes" amplitude-single-current-minutes="true">0</span>:
+					<span class="amplitude-current-seconds" amplitude-single-current-seconds="true">00</span>
+				</div>
+				<div id="timeColon">|</div>
+				<div class="borderTest durTime">
+					<span class="amplitude-duration-minutes" amplitude-single-duration-minutes="true">0</span>:
+					<span class="amplitude-duration-seconds" amplitude-single-duration-seconds="true">00</span>
+				</div>
+			<!--</div>-->
+
+
+
+        </footer>
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-2.0.0.js"></script>
+		<script src="https://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<!-- Custom Scripts -->
+	    <script src="js/amplitude.js"></script>
+	    <script src="js/michaelbromley.js"></script>
+	    <script src="js/amplitude-config.js"></script>
+		<script src="js/main.js"></script>
+	    <script src="js/scrollingNavbar.js"></script>
+
+
+	</body>
+</html>

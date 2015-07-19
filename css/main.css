@@ -1,0 +1,281 @@
+@font-face {
+    font-family: 'digital-7mono';
+    src: url('fonts/digital-7_mono-webfont.eot');
+    src: url('fonts/digital-7_mono-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/digital-7_mono-webfont.woff2') format('woff2'),
+    url('fonts/digital-7_mono-webfont.woff') format('woff'),
+    url('fonts/digital-7_mono-webfont.ttf') format('truetype'),
+    url('fonts/digital-7_mono-webfont.svg#digital-7mono') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+}
+.bgMain {
+    /*background: transparent url("../images/banner-xl.jpg") no-repeat center center fixed;*/
+    /*background-size: cover;*/
+}
+.bgMusic {
+    /*background: transparent url("../images/amps.jpg") no-repeat center center fixed;*/
+    /*background-size: cover;*/
+}
+.navbar {
+    background: transparent url("../images/table-bg.png");
+    border: none;
+}
+.navbar-right {
+    margin-right: 100px;
+    font-weight: 600;
+}
+h4.logo {
+    margin-left: 100px;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 30px;
+    text-transform: uppercase;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), color-stop(50%, rgba(0,0,0,.5)), to(rgba(0,0,0,1)));
+    margin-top: -6px;
+    color: #666;
+    text-shadow: 0 1px 0 #CCCCCC;
+
+}
+.musicBox {
+    padding-top: 50px;
+}
+.gutter {
+    /*margin-left: 0;*/
+    padding-left: 0;
+}
+.playAnim {
+    background: rgba(30, 30, 30, 0.9);
+    box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.9);
+    height: 369px;
+    border: 2px #111111 solid;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding-right: 5px;
+    padding-left: 0 !important;
+    margin-left: -10px;
+    margin-right: 5px;
+}
+.playAnim img {
+    max-width: 500px;
+    text-align: center;
+}
+ul.playList {
+    padding-left: 0;
+}
+ul.playList li {
+    background: rgba(30, 30, 30, 0.9);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-shadow: 1px 1px 3px #000;
+    border: 1px solid #20000f;
+    margin-bottom: 1px;
+    box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.9);
+    list-style-type: none;
+    color: #9397ff;
+    padding: 7px 25px;
+    text-align: left;
+    cursor: pointer;
+}
+ul.playList li:hover {
+    /*background: rgba(50, 50, 50, 0.9);*/
+    box-shadow: inset 0 0 50px #707070, 2px 2px 10px 0 rgba(0,0,0,0.9);
+}
+
+.playList li {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding-right: 15px;
+}
+.title {
+    flex: 2 1 auto;
+}
+.fa-download, .fa-file-text {
+    flex: 0 1 content;
+    color: #CFCFCF;
+    padding: 0 10px;
+}
+.fa-download:hover, .fa-file-text:hover {
+    text-shadow: 0 0 5px #fff;
+}
+button {
+    align-content: center;
+}
+#loaded {
+    /*opacity: 0;*/
+}
+#loadBox {
+    color: #ccd5dd;
+}
+.musicPage {
+    /*margin-top: 70px;*/
+}
+.activeSong {
+    background: rgba(0, 0, 0, 0.9) !important;
+    /*border: 1px solid #808080 !important;*/
+}
+.inActiveSong {
+    opacity: 0.7;
+}
+
+
+span.amplitude-current-seconds, span.amplitude-duration-seconds {
+    margin-left: -5px;
+    margin-right: 5px;
+}
+
+span.amplitude-current-minutes {
+    margin-right: 1px;
+}
+
+.amplitude-song-time-visualization-status {
+    background-color: #941212;
+    height: 9px;
+}
+.amplitude-song-time-visualization-fill {
+    display: inline-block;
+    vertical-align: middle;
+    height: 9px;
+    width: 0%;
+    background-color: #222 !important;
+}
+#amplitude-visualization {
+    overflow: hidden;
+}
+.transport {
+    flex: 0 1 auto;
+    /*padding: 8px;*/
+    font-size: 10px;
+    color: transparent;
+}
+.statusBar {
+    flex: 2 1 auto;
+    min-width: 100px;
+    max-width: 900px;
+    padding-left: 20px;
+}
+.songTitle h3 {
+    flex: 1 1 content;
+    min-width: 300px;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+    /*color: #8a7e8a;*/
+    /*text-shadow: 2px 2px 3px #000;*/
+    color: #000000;
+    text-shadow: 0px 0px 3px #dadada;
+    font-size: 1.5em;
+    padding: 0 30px;
+    margin: 0;
+}
+.currTime, .durTime {
+    flex: 0 1 content;
+    min-width: 51px;
+    color: #aa9baa;
+    text-shadow: 0px 0px 4px #000000;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    letter-spacing: 1.7px;
+}
+
+#timeColon {
+    flex: 0 1 auto;
+    max-width: 10px;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 600;
+    font-size: 1.4em;
+    color: #0c0c0c;
+    text-shadow: .3px 0px 1px #939393;
+    padding-right: 3px;
+    margin-left: -12px;
+}
+.videoCenter {
+    min-height: 300px;
+    margin: auto;
+}
+.footer {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    background: transparent url('../images/footerBg2.png') repeat-x;
+    border-top: 1px #161616 solid;
+    position: fixed;
+    bottom: -70px;
+    /*bottom: 0;*/
+    padding: 0 40px;
+}
+
+.lyric {
+    color: #CFCFCF;
+}
+.fa-square .fa-stack-2x  {
+    background: linear-gradient(to bottom, #333333, #555555, #222222);
+    border: 1px solid #000;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 1px 1px 1px #000;
+    -moz-box-shadow: 1px 1px 1px #000;
+    box-shadow: 1px 1px 1px #000;
+}
+.fa-stack:active  {
+    background: linear-gradient(to bottom, #333333, #555555, #222222);
+    border: 1px solid #000;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    box-shadow: inset 1px 1px 1px #000;
+}
+.fa-inverse {
+    color: #CFCFCF;
+    font-size: 12px;
+    text-shadow: 1px 1px 2px #000;
+    margin-top: 3px;
+}
+.fa-inverse:hover {
+    text-shadow: 0 0 5px #fff;
+}
+.fa-2x {
+    font-size: 1.4em;
+}
+.fa-2x.amplitude-play-pause {
+    font-size: 1.7em;
+}
+.fa-square:before {
+    margin-left: 3px;
+    /*text-shadow: 1px 1px 3px #000;*/
+}
+.fa-stack .fa-play {
+    margin-left: 1px;
+    font-size: 1em;
+}
+.fa-stack .fa-backward {
+    margin-left: -1px;
+}
+.fa-stack .fa-forward {
+    margin-left: 2px;
+}
+
+/*** TEST CLASSES ***/
+.borderTest {
+    /*border: 1px #ffffff solid;*/
+    /*background: transparent url("../images/table-bg.png");*/
+}
