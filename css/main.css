@@ -370,6 +370,6 @@
 }
 /*** TEST CLASSES ***/
 .borderTest {
-    /*border: 1px #ffffff solid;*/
+    border: 1px #ffffff solid;
     /*background: transparent url("../images/table-bg.png");*/
 }
