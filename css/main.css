@@ -161,7 +161,7 @@
         color: #ffffff;
         text-shadow: 0 0 10px #fff;
     }
-    .fa-stack:hover {
+    .download .fa-stack:hover, .social .fa-stack:hover {
         text-shadow: 0 0 10px #fff;
     }
     .download {
