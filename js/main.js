@@ -12,9 +12,9 @@ $('.playList li').on('click', function () {
 
 
 $('ul.playList li').hover(function() {
-    $(this).find('.hideBoxHide').show('drop', 'down');
+    $(this).find('.hideBoxHide').show('drop', {direction: 'up'}, 150);
 },function(){
-    $(this).find('.hideBoxHide').hide('drop', 'down');
+    $(this).find('.hideBoxHide').delay(500).hide('drop', {direction: 'up'}, 150);
 });
 
 //$('.playAnim').load('/BootSnippetTest/lyrics.html #loaded');

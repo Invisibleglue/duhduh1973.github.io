@@ -132,6 +132,14 @@
         color: #CFCFCF;
         flex: 1 1 content;
     }
+    .fa-facebook {
+        width: 13px;
+        height: 14px;
+    }
+    .social .fa-facebook:hover {
+        color: #ffffff;
+        background-color: #46629d;
+    }
     .download {
         flex: 1 1 content;
     }
@@ -141,7 +149,7 @@
         align-items: center;
     }
     .hideBoxHide {
-        display: none;
+        /*display: none;*/
     }
 
     .fa-download, .fa-file-text {
