@@ -291,6 +291,21 @@
         top:50%;
         position:relative;
         transform: translateY(-50%);
+        margin-top: -50px;
+    }
+    .buttonCenter {
+        position:relative;
+        left: 50%;
+        /*transform: translateY(-50%);*/
+        margin-top: 50px;
+        margin-left: -50px;
+        background-color: #9082fe;
+        width: 100px;
+    }
+    .videoTransport {
+        width: 100px;
+        height: 30px;
+
     }
 
     .footer {

@@ -27,6 +27,16 @@ $('.download a').attr( "href", function() {
     return "http://invisibleglue.com/audio/" + this.title + ".mp3";
 });
 
+
+$("video").prop('muted', true);
+
+$("#videoMute").click( function (){
+    if( $("video").prop('muted') ) {
+        $("video").prop('muted', false);
+    } else {
+        $("video").prop('muted', true);
+    }
+});
 //$('.playAnim').load('/BootSnippetTest/lyrics.html #loaded');
 //$('#loaded').css({'opacity': 1});
 
