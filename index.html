@@ -12,7 +12,6 @@
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/main.css"/>
 		<link rel="stylesheet" href="css/scrollingNavbar.css"/>
-		<link rel="stylesheet" href="css/hover.css"/>
 	</head>
 	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-vide-bg="images/theater">
 
@@ -34,13 +33,13 @@
 				</video>
 			</div>
 			<div class="buttonCenter">
-				<span id="videoPlayPause" class="hvr-buzz-out fa-stack fa-lg">
+				<span id="videoPlayPause" class="fa-stack fa-lg">
 				  <i class="fa fa-square fa-stack-2x iconBg"></i>
 				  <i id="videoPpIcon" class="fa fa-play fa-stack-1x fa-inverse"></i>
 				</span>
 				<span id="videoMute" class="fa-stack fa-lg">
 				  <i class="fa fa-square fa-stack-2x iconBg"></i>
-				  <i id="videoMuteIcon" class="fa fa-volume-up fa-volume-off fa-stack-1x fa-inverse"></i>
+				  <i id="videoMuteIcon" class="fa fa-volume-off fa-stack-1x fa-inverse"></i>
 				</span>
 				<span id="fullScreen" class="fa-stack fa-lg">
 				  <i class="fa fa-square fa-stack-2x iconBg"></i>
@@ -354,6 +353,19 @@
 		<script src="js/main.js"></script>
 	    <script src="js/scrollingNavbar.js"></script>
 
+	   <script>
+		   $(document).ready(function() {
+			   var wiggleButton = setInterval(function () {
+				   $('#videoPlayPause').toggleClass('hvr-buzz-out');
+			   }, 4000);
 
+			   function stopWiggle() {
+				   clearInterval(wiggleButton);
+			   };
+			   $('#videoPlayPause').click(function () {
+				   stopWiggle();
+			   });
+		   });
+	   </script>
 	</body>
 </html>

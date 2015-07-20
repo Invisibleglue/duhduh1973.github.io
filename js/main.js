@@ -27,7 +27,7 @@ $('.download a').attr( "href", function() {
 });
 
 
-$("video").prop('muted', true);
+
 
 $("#videoMuteIcon").click( function (){
     $('#videoMuteIcon').toggleClass('fa-volume-up');
