@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/main.css"/>
 		<link rel="stylesheet" href="css/scrollingNavbar.css"/>
+		<link rel="stylesheet" href="css/hover.css"/>
 	</head>
 	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-vide-bg="images/theater">
 
@@ -28,14 +29,14 @@
        </nav>
 		<section id="home" class="home">
 			<div class="videoCenter">
-				<video id="wayOutSplash" class="embed-responsive-item" autoplay>
+				<video id="wayOutSplash" class="embed-responsive-item">
 					<source src="images/WayOutRing.mp4" type="video/mp4"/>
 				</video>
 			</div>
 			<div class="buttonCenter">
-				<span id="videoPlayPause" class="fa-stack fa-lg">
+				<span id="videoPlayPause" class="hvr-buzz-out fa-stack fa-lg">
 				  <i class="fa fa-square fa-stack-2x iconBg"></i>
-				  <i id="videoPpIcon" class="fa fa-pause fa-play fa-stack-1x fa-inverse"></i>
+				  <i id="videoPpIcon" class="fa fa-play fa-stack-1x fa-inverse"></i>
 				</span>
 				<span id="videoMute" class="fa-stack fa-lg">
 				  <i class="fa fa-square fa-stack-2x iconBg"></i>
@@ -45,15 +46,16 @@
 				  <i class="fa fa-square fa-stack-2x iconBg"></i>
 				  <i id="" class="glyphicon glyphicon-fullscreen fa-stack-1x fa-inverse"></i>
 				</span>
-				<span id="btnLight" class="on fa-stack fa-lg">
-					<i class="fa fa-square fa-stack-2x iconBg"></i>
-				  	<i id="btnLightIcon" class="fa fa-lightbulb-o fa-stack-1x fa-inverse"></i>
-				</span>
 				<div class="progressBar">
 					<div class="timeBar"></div>
 					<div class="bufferBar"></div>
 				</div>
-				<!--<div class="progressTime">
+
+				<!--<span id="btnLight" class="on fa-stack fa-lg">
+					<i class="fa fa-square fa-stack-2x iconBg"></i>
+				  	<i id="btnLightIcon" class="fa fa-lightbulb-o fa-stack-1x fa-inverse"></i>
+				</span>
+				<div class="progressTime">
 					Current play time: <span class="current"></span>
 					Video duration: <span class="duration"></span>
 				</div>

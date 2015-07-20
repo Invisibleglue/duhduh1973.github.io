@@ -277,7 +277,7 @@
     .iconBg {
         color: transparent;
         border: 1px solid #191919;
-        border-radius: 3px;
+        border-radius: 5px;
         background-color: #0b0b0b;
     }
     #timeColon {
@@ -457,7 +457,7 @@
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #1c1c1c;
+    background-color: #161616;
     z-index: 5;
     /*opacity: 0.5;*/
 }
