@@ -288,8 +288,9 @@
     }
 
     .videoCenter {
-        min-height: 300px;
-        margin: auto;
+        top:50%;
+        position:relative;
+        transform: translateY(-50%);
     }
 
     .footer {
