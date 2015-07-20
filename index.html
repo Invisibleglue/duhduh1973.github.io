@@ -28,15 +28,42 @@
        </nav>
 		<section id="home" class="home">
 			<div class="videoCenter">
-				<video class="embed-responsive-item" autoplay>
+				<video id="wayOutSplash" class="embed-responsive-item" autoplay>
 					<source src="images/WayOutRing.mp4" type="video/mp4"/>
 				</video>
 			</div>
 			<div class="buttonCenter">
-				<i class="fa fa-stop fa-2x"></i>
-				<i class="fa fa-play fa-2x"></i>
+				<span id="videoPlayPause" class="fa-stack fa-lg">
+				  <i class="fa fa-square fa-stack-2x iconBg"></i>
+				  <i id="videoPpIcon" class="fa fa-pause fa-play fa-stack-1x fa-inverse"></i>
+				</span>
+				<span id="videoMute" class="fa-stack fa-lg">
+				  <i class="fa fa-square fa-stack-2x iconBg"></i>
+				  <i id="videoMuteIcon" class="fa fa-volume-up fa-volume-off fa-stack-1x fa-inverse"></i>
+				</span>
+				<span id="fullScreen" class="fa-stack fa-lg">
+				  <i class="fa fa-square fa-stack-2x iconBg"></i>
+				  <i id="" class="glyphicon glyphicon-fullscreen fa-stack-1x fa-inverse"></i>
+				</span>
+				<span id="btnLight" class="on fa-stack fa-lg">
+					<i class="fa fa-square fa-stack-2x iconBg"></i>
+				  	<i id="btnLightIcon" class="fa fa-lightbulb-o fa-stack-1x fa-inverse"></i>
+				</span>
+				<div class="progressBar">
+					<div class="timeBar"></div>
+					<div class="bufferBar"></div>
+				</div>
+				<!--<div class="progressTime">
+					Current play time: <span class="current"></span>
+					Video duration: <span class="duration"></span>
+				</div>
 
+				<!--<span id="videoBack" class="fa-stack fa-lg">
+				  <i class="fa fa-square fa-stack-2x"></i>
+				  <i class="fa fa-step-backward fa-stack-1x fa-inverse"></i>
+				</span>-->
 			</div>
+
 		</section>
 
 	   	<section id="music" class="music">

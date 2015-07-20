@@ -8,8 +8,18 @@ of those sections to manage the look and feel of the site. */
     height: 100%;
     padding-top: 70px;
     text-align: center;
-    background: transparent url("../images/xrayBg.jpg") no-repeat center center fixed;
-    background-size: cover;
+
+
+    background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color: #141414;
+    background-size:16px 16px;
+
+    /*background: transparent url("../images/xrayBg.jpg") no-repeat center center fixed;*/
+    /*background-size: cover;*/
     /*opacity: 0.6;*/
 }
 .imgTest {
