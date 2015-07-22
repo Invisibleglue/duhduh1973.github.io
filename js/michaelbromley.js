@@ -89,6 +89,9 @@ var MichaelBromleyVisualization = (function() {
 				Resize the canvas to fill browser window dynamically
 			*/
 			window.addEventListener('resize', this.resizeCanvas, false);
+
+			var $ = jQuery;
+			$('canvas').delay(5000).show('slow');
 		}
 	}
 

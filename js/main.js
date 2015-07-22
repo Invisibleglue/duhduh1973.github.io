@@ -1,12 +1,52 @@
-$('.playList li').on('click', function (event) {
-    $('#defaultAnim').toggle('scale', function () {
-        $('.playAnim').hide().load("lyrics.html #loaded").fadeIn('500');
-    });
+$('.amplitude-play-pause').on('click', function () {
+    $('#defaultAnim').hide('fade',2000, 'easeOutCubic');
 });
 
 
+var hideFooter = function() {
+    var $footer = $('.footer');
+    var $footerTop = $('.footerTopMouseCatch');
+    $footer.stop().animate({bottom: "-70px"}, 1000);
+    $footerTop.stop().animate({bottom: "0"}, 1000);
+}
+var footerTimer;
+
 $('.playList li').on('click', function () {
+    $('.footer').stop().animate({bottom: "0px"}, 1000);
+    $('.footerTopMouseCatch').stop().animate({bottom: "56px"}, 1000);
+
+    footerTimer = setTimeout(hideFooter, 4000);
+});
+
+
+$('.footer, .footerTopMouseCatch').hover(function () {
+    console.log('Mouse Enter');
+    clearTimeout(footerTimer);
+}, function () {
+    console.log('Mouse Leave');
+    footerTimer = setTimeout(hideFooter, 4000);
+});
+$('.footerTopMouseCatch').hover(function () {
     $('.footer').animate({bottom: "0px"}, 1000);
+    $('.footerTopMouseCatch').animate({bottom: "56px"}, 1000);
+
+    footerTimer = setTimeout(hideFooter, 4000);
+});
+$(function () {
+    $(window).scroll(function() {
+        if ($(".navbar").offset().top > 50) {
+            $(".navbar-fixed-top").addClass("top-nav-collapse");
+        } else {
+            $(".navbar-fixed-top").removeClass("top-nav-collapse");
+        }
+    });
+
+    $('.footer').bind('click', function () {
+        $('html, body').stop().animate({
+            scrollTop: $('#music').offset().top
+        }, 1500, 'easeInOutExpo');
+    });
+
 });
 
 
@@ -137,6 +177,18 @@ $('#fullScreen').on('click', function() {
     return false;
 });
 
+$(document).ready(function() {
+    var wiggleButton = setInterval(function () {
+        $('#videoPlayPause').toggleClass('hvr-buzz-out hvr-buzz-out-glow');
+    }, 4000);
+
+    function stopWiggle() {
+        clearInterval(wiggleButton);
+    };
+    $('#videoPlayPause').click(function () {
+        stopWiggle();
+    });
+});
 
 /*
 $('#btnLight').click(function() {

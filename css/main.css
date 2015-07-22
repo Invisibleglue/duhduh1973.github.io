@@ -85,6 +85,7 @@
         padding-left: 0 !important;
         margin-left: -10px;
         margin-right: 5px;
+        overflow: hidden;
     }
 
     .playAnim img {
@@ -124,9 +125,14 @@
         align-items: center;
         /*padding-right: 5px;*/
     }
-
-    .title {
+    #amplitude-visualization {
+        /*display: none;*/
+    }
+    .playlistTitle {
         flex: 2 1 content;
+    }
+    #defaultAnim {
+        /*z-index: 10;*/
     }
     .social {
         color: #CFCFCF;
@@ -175,6 +181,10 @@
     }
     .hideBoxHide {
         display: none;
+    }
+    .clickTest {
+        min-width: 100%;
+        min-height: 100%;
     }
 
     button {
@@ -329,7 +339,6 @@
     }
     .footer {
         display: flex;
-        display: -webkit-flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
@@ -340,8 +349,22 @@
         bottom: -70px;
         /*bottom: 0;*/
         padding: 0 40px;
+        margin-top: 100px;
+    }
+    .footerTopMouseCatch {
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        bottom: -70px;
+        /*visibility: hidden;*/
     }
 
+    .visualizerImage {
+        min-width: 100%;
+        padding: 0 !important;
+        margin-right: -5px !important;
+        z-index: 999;
+    }
     .lyric {
         color: #CFCFCF;
     }
@@ -488,7 +511,7 @@
     opacity: 0;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 998;
 }
 
 /* Buzz Out */
@@ -548,63 +571,66 @@
     10% {
         -webkit-transform: translateX(3px) rotate(2deg);
         transform: translateX(3px) rotate(2deg);
+        text-shadow: 0 0 30px rgba(255,255,255,0.05);
     }
 
     20% {
         -webkit-transform: translateX(-3px) rotate(-2deg);
         transform: translateX(-3px) rotate(-2deg);
+        text-shadow: 0 0 30px rgba(255,255,255,0.1);
     }
 
     30% {
         -webkit-transform: translateX(3px) rotate(2deg);
         transform: translateX(3px) rotate(2deg);
+        text-shadow: 0 0 30px rgba(255,255,255,0.1);
     }
 
     40% {
         -webkit-transform: translateX(-3px) rotate(-2deg);
         transform: translateX(-3px) rotate(-2deg);
+        text-shadow: 0 0 30px rgba(255,255,255,0.1);
     }
 
     50% {
         -webkit-transform: translateX(2px) rotate(1deg);
         transform: translateX(2px) rotate(1deg);
+        text-shadow: 0 0 30px rgba(255,255,255,0.1);
     }
 
     60% {
         -webkit-transform: translateX(-2px) rotate(-1deg);
         transform: translateX(-2px) rotate(-1deg);
+        text-shadow: 0 0 30px rgba(255,255,255,0.1);
     }
 
     70% {
         -webkit-transform: translateX(2px) rotate(1deg);
         transform: translateX(2px) rotate(1deg);
+        text-shadow: 0 0 30px rgba(255,255,255,0.1);
     }
 
     80% {
         -webkit-transform: translateX(-2px) rotate(-1deg);
         transform: translateX(-2px) rotate(-1deg);
+        text-shadow: 0 0 30px rgba(255,255,255,0.1);
     }
 
     90% {
         -webkit-transform: translateX(1px) rotate(0);
         transform: translateX(1px) rotate(0);
+        text-shadow: 0 0 30px rgba(255,255,255,0.05);
     }
 
     100% {
         -webkit-transform: translateX(-1px) rotate(0);
         transform: translateX(-1px) rotate(0);
+        text-shadow: 0 0 30px rgba(255,255,255,0);
     }
 }
 
 .hvr-buzz-out {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
     -webkit-animation-name: hvr-buzz-out;
     animation-name: hvr-buzz-out;
     -webkit-animation-duration: 0.75s;
@@ -614,3 +640,25 @@
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
 }
+
+/*.hvr-buzz-out-glow {
+    -webkit-animation-name: hvr-buzz-out-glow;
+    animation-name: hvr-buzz-out-glow;
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}*/
+/*
+.hvr-buzz-out-glow-off {
+    -webkit-transition: text-shadow 500ms;
+    -moz-transition: text-shadow 500ms;
+    -ms-transition: text-shadow 500ms;
+    -o-transition: text-shadow 500ms;
+    transition: text-shadow 500ms;
+
+    text-shadow: 0 0 0 rgba(255,255,255,0);
+}
+*/

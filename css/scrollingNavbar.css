@@ -15,7 +15,7 @@ of those sections to manage the look and feel of the site. */
     radial-gradient(black 15%, transparent 16%) 8px 8px,
     radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
     radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-    background-color: #141414;
+    background-color: #101010;
     background-size:16px 16px;
 
     /*background: transparent url("../images/xrayBg.jpg") no-repeat center center fixed;*/

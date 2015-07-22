@@ -37,6 +37,8 @@ Amplitude.init({
         "name": "Shadow Shapes",
         "url": "http://invisibleglue.com/audio/Shadow%20Shapes.mp3"
     }],
+    "default_album_art": "$../images/landingPoster.jpg",
+    "visualization_backup": "album-art",
     "debug": true,
     "callbacks": {
         "after_play": "active_play",

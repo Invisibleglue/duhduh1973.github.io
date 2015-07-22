@@ -17,6 +17,7 @@
 
        <nav class="navbar navbar-inverse navbar-fixed-top page-scroll">
        	<a class="navbar-brand page-scroll" href="#page-top"><h4 class="logo">invisible glue</h4></a>
+		   <h5 id="result"></h5>
        	<ul class="nav navbar-nav navbar-right">
        		<li>
 				<a class="page-scroll" href="#music">MUSIC</a>
@@ -28,7 +29,7 @@
        </nav>
 		<section id="home" class="home">
 			<div class="videoCenter">
-				<video id="wayOutSplash" poster="images/landingPoster.jpg" class="embed-responsive-item">
+				<video id="wayOutSplash" poster="images/landingPoster.jpg" class="embed-responsive-item" preload>
 					<source src="images/WayOutRing.mp4" type="video/mp4"/>
 				</video>
 			</div>
@@ -43,7 +44,7 @@
 				</span>
 				<span id="fullScreen" class="fa-stack fa-lg">
 				  <i class="fa fa-square fa-stack-2x iconBg"></i>
-				  <i id="" class="glyphicon glyphicon-fullscreen fa-stack-1x fa-inverse"></i>
+				  <i class="glyphicon glyphicon-fullscreen fa-stack-1x fa-inverse"></i>
 				</span>
 				<div class="progressBar">
 					<div class="timeBar"></div>
@@ -71,13 +72,14 @@
 			<div class="container">
 				<div class="row musicBox">
 					<div class="playAnim col-xs-8 col-sm-8 col-md-8 col-lg-8">
+						<img id="defaultAnim" src="images/landingPoster.jpg" class="visualizerImage" alt="Invisible Glue">
 						<div id="amplitude-visualization"></div>
-						<!--<img id="defaultAnim" src="images/seal.png" class="img-responsive"		 alt="Dissatisfaction Guaranteed">-->
+
 					</div>
 					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 gutter">
 						<ul class="playList">
 							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="0">
-								<div class="title">Muddy Shoes</div>
+								<div class="playlistTitle">Muddy Shoes</div>
 								<div class="hideBoxHide">
 									<div class="hideBox">
 										<div class="social">
@@ -98,7 +100,7 @@
 								</div>
 							</li>
 							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="1">
-								<div class="title">The Silence Got So Loud</div>
+								<div class="playlistTitle">The Silence Got So Loud</div>
 								<div class="hideBoxHide">
 									<div class="hideBox">
 										<div class="social">
@@ -119,7 +121,7 @@
 								</div>
 							</li>
 							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="2">
-								<div class="title">Way Out Way Out</div>
+								<div class="playlistTitle">Way Out Way Out</div>
 								<div class="hideBoxHide">
 									<div class="hideBox">
 										<div class="social">
@@ -140,7 +142,7 @@
 								</div>
 							</li>
 							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="3">
-								<div class="title">Illusion Denied</div>
+								<div class="playlistTitle">Illusion Denied</div>
 								<div class="hideBoxHide">
 									<div class="hideBox">
 										<div class="social">
@@ -161,7 +163,7 @@
 								</div>
 							</li>
 							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="4">
-								<div class="title">Dissatisfaction Guaranteed</div>
+								<div class="playlistTitle">Dissatisfaction Guaranteed</div>
 								<div class="hideBoxHide">
 									<div class="hideBox">
 										<div class="social">
@@ -182,7 +184,7 @@
 								</div>
 							</li>
 							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="5">
-								<div class="title">Take My Hand</div>
+								<div class="playlistTitle">Take My Hand</div>
 								<div class="hideBoxHide">
 									<div class="hideBox">
 										<div class="social">
@@ -203,7 +205,7 @@
 								</div>
 							</li>
 							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="6">
-								<div class="title">Delusion Campaign</div>
+								<div class="playlistTitle">Delusion Campaign</div>
 								<div class="hideBoxHide">
 									<div class="hideBox">
 										<div class="social">
@@ -224,7 +226,7 @@
 								</div>
 							</li>
 							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="7">
-								<div class="title">Breathe It In</div>
+								<div class="playlistTitle">Breathe It In</div>
 								<div class="hideBoxHide">
 									<div class="hideBox">
 										<div class="social">
@@ -245,7 +247,7 @@
 								</div>
 							</li>
 							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="8">
-								<div class="title">Burn Or Be Burned</div>
+								<div class="playlistTitle">Burn Or Be Burned</div>
 								<div class="hideBoxHide">
 									<div class="hideBox">
 										<div class="social">
@@ -266,7 +268,7 @@
 								</div>
 							</li>
 							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="9">
-								<div class="title">Shadow Shapes</div>
+								<div class="playlistTitle">Shadow Shapes</div>
 								<div class="hideBoxHide">
 									<div class="hideBox">
 										<div class="social">
@@ -304,7 +306,7 @@
 		</section>
 
 
-
+		<div class="footerTopMouseCatch"></div>
         <footer class="footer">
 			<div class="transport">
 				<span class="fa-stack fa-square fa-2x amplitude-next">
@@ -353,19 +355,13 @@
 		<script src="js/main.js"></script>
 	    <script src="js/scrollingNavbar.js"></script>
 
-	   <script>
-		   $(document).ready(function() {
-			   var wiggleButton = setInterval(function () {
-				   $('#videoPlayPause').toggleClass('hvr-buzz-out');
-			   }, 4000);
-
-			   function stopWiggle() {
-				   clearInterval(wiggleButton);
-			   };
-			   $('#videoPlayPause').click(function () {
-				   stopWiggle();
-			   });
+	  <!-- <script>
+		   $( "*", document.body ).click(function( event ) {
+			   var offset = $( this ).offset();
+			   event.stopPropagation();
+			   $( "#result" ).text( this.tagName +
+					   " coords ( " + offset.left + ", " + offset.top + " )" );
 		   });
-	   </script>
+	   </script>-->
 	</body>
 </html>

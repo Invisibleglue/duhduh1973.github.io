@@ -9,5 +9,6 @@
     <orderEntry type="library" name="Amplitude" level="application" />
     <orderEntry type="library" name="Node.js v0.12.6 Core Modules" level="application" />
     <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="jquery-ui" level="application" />
   </component>
 </module>
