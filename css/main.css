@@ -392,6 +392,9 @@
         margin-left: .05em;
         margin-top: .08em;
     }
+    #videoPlayPause, #videoMute, #fullScreen {
+        cursor: pointer;
+    }
 
     .fa-inverse {
         color: #CFCFCF;
