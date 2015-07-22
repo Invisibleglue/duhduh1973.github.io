@@ -3,34 +3,46 @@ $('.amplitude-play-pause').on('click', function () {
 });
 
 
-var hideFooter = function() {
-    var $footer = $('.footer');
-    var $footerTop = $('.footerTopMouseCatch');
-    $footer.stop().animate({bottom: "-70px"}, 1000);
-    $footerTop.stop().animate({bottom: "0"}, 1000);
-}
 var footerTimer;
 
 $('.playList li').on('click', function () {
     $('.footer').stop().animate({bottom: "0px"}, 1000);
-    $('.footerTopMouseCatch').stop().animate({bottom: "56px"}, 1000);
+    $('.footerTopMouseCatch').stop().animate({bottom: "0px"}, 1000);
 
-    footerTimer = setTimeout(hideFooter, 4000);
+    footerTimer = setTimeout(function () {
+        var $footer = $('.footer');
+        var $footerTop = $('.footerTopMouseCatch');
+        $footer.stop().animate({bottom: "-70px"}, 1000);
+        $footerTop.stop().animate({bottom: "0"}, 10);
+    }, 8000);
 });
 
 
-$('.footer, .footerTopMouseCatch').hover(function () {
+$('.footer').hover(function () {
     console.log('Mouse Enter');
     clearTimeout(footerTimer);
 }, function () {
     console.log('Mouse Leave');
-    footerTimer = setTimeout(hideFooter, 4000);
+    footerTimer = setTimeout(function () {
+        var $footer = $('.footer');
+        var $footerTop = $('.footerTopMouseCatch');
+        $footer.stop().animate({bottom: "-70px"}, 1000);
+        $footerTop.stop().animate({bottom: "0"}, 10);
+    }, 6000);
 });
+
 $('.footerTopMouseCatch').hover(function () {
     $('.footer').animate({bottom: "0px"}, 1000);
-    $('.footerTopMouseCatch').animate({bottom: "56px"}, 1000);
+    $('.footerTopMouseCatch').animate({bottom: "0px"}, 10);
 
-    footerTimer = setTimeout(hideFooter, 4000);
+}, function () {
+    console.log('Mouse Leave');
+    footerTimer = setTimeout(function () {
+        var $footer = $('.footer');
+        var $footerTop = $('.footerTopMouseCatch');
+        $footer.stop().animate({bottom: "-70px"}, 1000);
+        $footerTop.stop().animate({bottom: "0"}, 10);
+    }, 6000);
 });
 $(function () {
     $(window).scroll(function() {
@@ -239,3 +251,4 @@ $('#btnLight').click(function() {
     }
     return false;
 });*/
+

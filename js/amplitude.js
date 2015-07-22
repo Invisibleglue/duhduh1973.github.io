@@ -1343,7 +1343,7 @@ var Amplitude = (function () {
 
         if( document.querySelector('[amplitude-single-song-time-visualization="true"]') ){
             current_song_time_visualization = document.querySelector('[amplitude-single-song-time-visualization="true"]');
-        }else{
+        }else if(! document.querySelector('[amplitude-single-song-time-visualization="true"]')){
             current_song_time_visualization = document.querySelector('.amplitude-song-time-visualization[amplitude-song-index="'+config.active_index+'"]');
         }
 
@@ -1671,7 +1671,7 @@ var Amplitude = (function () {
          On time update, update visual displays
          */
         config.active_song.addEventListener('timeupdate', privateUpdateTime );
-        config.active_song.addEventListener('timeupdate', timeEvent );
+        //config.active_song.addEventListener('timeupdate', timeEvent );
 
         /*
          Handles what to do when the song has ended.
@@ -1875,7 +1875,7 @@ var Amplitude = (function () {
      Lyrical Time Event
      */
 
-    function timeEvent() {
+    /*function timeEvent() {
         if (config.active_song.currentTime >= 33 && config.active_song.currentTime <= 34) {
             document.getElementById("#wayoutlyric1").classList.remove("invisible");
         } if (config.active_song.currentTime >= 35 && config.active_song.currentTime <= 36){
@@ -1894,7 +1894,7 @@ var Amplitude = (function () {
             document.getElementById("#wayoutlyric4").classList.add("invisible");
         }
         false;
-    }
+    }*/
 
 
 

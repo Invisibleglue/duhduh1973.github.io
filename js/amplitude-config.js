@@ -44,7 +44,8 @@ Amplitude.init({
         "after_play": "active_play",
         "after_pause": "active_pause",
         "after_next": "active_next",
-        "after_prev": "active_prev"
+        "after_prev": "active_prev",
+        "after_song_ended": "after_end"
     }
 });
 
@@ -52,6 +53,18 @@ Amplitude.registerVisualization( MichaelBromleyVisualization, {
     width: '771',
     height: '360'
 } );
+
+function after_end (){
+    var $ = jQuery;
+    $('.footer').stop().animate({bottom: "0px"}, 1000);
+
+    footerTimer = setTimeout(function () {
+        var $footer = $('.footer');
+        var $footerTop = $('.footerTopMouseCatch');
+        $footer.stop().animate({bottom: "-70px"}, 1000);
+        $footerTop.stop().animate({bottom: "0"}, 10);
+    }, 6000);
+}
 
 function active_play (){
     var $ = jQuery;
