@@ -65,22 +65,30 @@ function after_end (){
         $footerTop.stop().animate({bottom: "0"}, 10);
     }, 6000);
 }
+var $playLi = $('.playList li');
 
 function active_play (){
     var $ = jQuery;
+    var $ampActive = $('.amplitude-active-song-container');
+
     $('#playIcon').removeClass('fa-play').addClass('fa-pause');
-    $('.amplitude-active-song-container').fadeTo(200, 1).addClass('activeSong', 200, "easeInOutQuad");
-    $('.playList li').not('.amplitude-active-song-container').fadeTo(200, 0.8).removeClass('activeSong', 200, "easeInOutQuad");
+    $ampActive.fadeTo(200, 1).addClass('activeSong', 200, "easeInOutQuad").find('i.fa:eq(0)').addClass('fa-rotate-90');
+    $playLi.find('.playlistTitle').fadeTo(400, 1);
+    $playLi.not('.amplitude-active-song-container').fadeTo(400, 0.7).removeClass('activeSong', 200, "easeInOutQuad").find('i.fa:eq(0)').removeClass('fa-rotate-90');
+    $playLi.not('.amplitude-active-song-container').find('.playlistTitle').fadeTo(400, 0.4);
     $('.amplitude-song-time-visualization').css('background-color', '#222').animate({ width: '100%' }, 3000, "easeInQuad");
+
+    $ampActive.find('.hideBoxHide').show('slide',{direction: 'up'}, 'fast');
+    $playLi.not('.amplitude-active-song-container').find('.hideBoxHide').hide();
     console.log(Amplitude.getActiveSongMetadata());
 }
 function active_pause (){
     var $ = jQuery;
     $('#playIcon').removeClass('fa-pause').addClass('fa-play');
     //noinspection JSJQueryEfficiency
-    $('.playList li').not('.amplitude-active-song-container').removeClass('activeSong');
+    $playLi.not('.amplitude-active-song-container').removeClass('activeSong');
     //noinspection JSJQueryEfficiency
-    $('.playList li').fadeTo(200, 1);
+    $playLi.fadeTo(200, 1).find('.playlistTitle').fadeTo(400, 1);
     console.log('PAUSED');
 }
 function active_next (){
