@@ -22,7 +22,7 @@ var Amplitude = (function () {
         if( document.readyState == "complete" ){
             privateInitializeEventHandlers();
         }
-    }
+    };
 
     /*
      |--------------------------------------------------------------------------

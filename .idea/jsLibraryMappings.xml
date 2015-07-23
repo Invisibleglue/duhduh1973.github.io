@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{Amplitude, Node.js v0.12.6 Core Modules, bootstrap, jQuery UI-1.10.2, jQuery-2.0.0, jquery-ui}" />
+    <file url="file://$PROJECT_DIR$/.idea/codeStyleSettings.xml" libraries="{Amplitude}" />
+    <file url="file://$PROJECT_DIR$/.idea/jsLibraryMappings.xml" libraries="{Amplitude}" />
+    <file url="file://$PROJECT_DIR$/index.html" libraries="{Amplitude, ECMAScript 6, HTML, HTML5 / EcmaScript 5, bootstrap, jquery.bootstrap.wizard-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/js/amplitude-config.js" libraries="{Amplitude, jQuery UI-1.10.2, jQuery-2.0.0}" />
+    <file url="file://$PROJECT_DIR$/js/amplitude.js" libraries="{Amplitude, jQuery UI-1.10.2, jQuery-2.0.0, jquery-ui}" />
+    <file url="file://$PROJECT_DIR$/js/michaelbromley.js" libraries="{Amplitude}" />
+    <file url="file://$PROJECT_DIR$/lyrics.html" libraries="{HTML5 / EcmaScript 5}" />
+    <file url="PROJECT" libraries="{Amplitude, Node.js v0.12.6 Core Modules, bootstrap, jQuery UI-1.10.2, jQuery-2.0.0, jquery-ui, jquery.bootstrap.wizard-DefinitelyTyped}" />
     <includedPredefinedLibrary name="ECMAScript 6" />
     <includedPredefinedLibrary name="Meteor project library" />
     <includedPredefinedLibrary name="Node.js Globals" />

@@ -208,6 +208,8 @@ $(document).ready(function() {
 
 // Wiggles first song in playList (let user know to click)
 $(document).ready(function() {
+    console.log(Amplitude.getSongByIndex({'0': 'name'}));
+
     var wiggleSong = setInterval(function () {
         $('#wiggleSongID').toggleClass('hvr-icon-wobble-horizontal');
     }, 2000);
@@ -240,6 +242,8 @@ $('#lyricIcon').on('click', function () {
     //$('.amplitude-visualization').show('fade', 2000);
     //});
 });
+
+
 
 /*
 $('#btnLight').click(function() {

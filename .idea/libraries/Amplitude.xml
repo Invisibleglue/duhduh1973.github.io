@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Amplitude" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$USER_HOME$/Desktop/Web Design/amplitudejs-master/js/amplitude-5-08-2015.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$USER_HOME$/Desktop/Web Design/amplitudejs-master/js/amplitude-5-08-2015.js" />
+    </CLASSES>
+    <DOCUMENTATION>
+      <root url="https://open.521dimensions.com/amplitudejs/docs" />
+    </DOCUMENTATION>
+    <SOURCES />
+  </library>
+</component>
