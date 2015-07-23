@@ -12,8 +12,19 @@
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/main.css"/>
 		<link rel="stylesheet" href="css/scrollingNavbar.css"/>
+		<link rel="stylesheet" href="css/hovers.css"/>
 	</head>
-	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-vide-bg="images/theater">
+	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=1564949173777685";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		</script>
+
 
        <nav class="navbar navbar-inverse navbar-fixed-top page-scroll">
        	<a class="navbar-brand page-scroll" href="#page-top"><h4 class="logo">invisible glue</h4></a>
@@ -72,14 +83,15 @@
 			<div class="container">
 				<div class="row musicBox">
 					<div class="playAnim col-xs-8 col-sm-8 col-md-8 col-lg-8">
+						<div id="fb-comments" class="fb-comments" data-colorscheme="dark" data-href="http://duhduh1973.github.io/" data-version="v2.4" data-width="750" data-numposts="25"></div>
 						<img id="defaultAnim" src="images/landingPoster.jpg" class="visualizerImage" alt="Invisible Glue">
 						<div id="amplitude-visualization"></div>
 
 					</div>
 					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 gutter">
 						<ul class="playList">
-							<li class="amplitude-song-container amplitude-play-pause" amplitude-song-index="0">
-								<div class="playlistTitle"><i class="fa fa-caret-right fa-fw"></i><span class="titleAlign">Muddy Shoes</span></div>
+							<li id="wiggleSongID" class="amplitude-song-container amplitude-play-pause" amplitude-song-index="0">
+								<div class="playlistTitle"><i class="fa fa-caret-right fa-fw"></i><span id="wiggleTitle" class="titleAlign">Muddy Shoes</span></div>
 								<div class="hideBoxHide">
 									<div class="hideBox">
 										<div class="social">
@@ -299,6 +311,20 @@
 							<li class="playListStatusBar amplitude-song-time-visualization amplitude-song-time-visualization-fill" amplitude-song-index="9"></li>
 							</li>
 						</ul>
+					</div>
+					<div class="buttonRow col-xs-8 col-sm-8 col-md-8 col-lg-8">
+						<span id="commentIcon" class="fa-stack fa-lg pull-left" title="Comments">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-comments fa-stack-1x fa-inverse"></i>
+						</span>
+						<span id="visualIcon" class="fa-stack fa-lg pull-left" title="Visualizer">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-picture-o fa-stack-1x fa-inverse"></i>
+						</span>
+						<span id="lyricIcon" class="fa-stack fa-lg pull-left" title="Lyrics">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-file-text-o fa-stack-1x fa-inverse"></i>
+						</span>
 					</div>
 				</div>
 			</div>

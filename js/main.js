@@ -206,6 +206,41 @@ $(document).ready(function() {
     });
 });
 
+// Wiggles first song in playList (let user know to click)
+$(document).ready(function() {
+    var wiggleSong = setInterval(function () {
+        $('#wiggleSongID').toggleClass('hvr-icon-wobble-horizontal');
+    }, 2000);
+
+    function stopWiggleSong() {
+        clearInterval(wiggleSong);
+    };
+    // Kill wiggle loop when play button clicked
+    $('#wiggleSongID').click(function () {
+        stopWiggleSong();
+    });
+    $('.fb-comments').hide();
+});
+
+$('#commentIcon').on('click', function () {
+    $('#defaultAnim').hide('fade', 2000);
+    $('.amplitude-visualization').hide('fade', 2000, function () {
+        //$('#fb-comments').show('fade', 2000);
+    });
+});
+$('#visualIcon').on('click', function () {
+    $('#fb-comments').hide('fade', 2000);
+    $('#defaultAnim').hide('fade', 2000, function () {
+    $('.amplitude-visualization').show('fade', 2000);
+    });
+});
+$('#lyricIcon').on('click', function () {
+    $('.amplitude-visualization').hide('fade', 2000);
+    //$('#defaultAnim').hide('fade', 2000, function () {
+    //$('.amplitude-visualization').show('fade', 2000);
+    //});
+});
+
 /*
 $('#btnLight').click(function() {
     if($(this).hasClass('on')) {

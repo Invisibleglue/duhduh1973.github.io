@@ -647,151 +647,78 @@ input[type=range]:focus::-ms-fill-upper {
     z-index: 998;
 }
 
-/* Buzz Out */
-@-webkit-keyframes hvr-buzz-out {
-    10% {
-        -webkit-transform: translateX(3px) rotate(2deg);
-        transform: translateX(3px) rotate(2deg);
-    }
-
-    20% {
-        -webkit-transform: translateX(-3px) rotate(-2deg);
-        transform: translateX(-3px) rotate(-2deg);
-    }
-
-    30% {
-        -webkit-transform: translateX(3px) rotate(2deg);
-        transform: translateX(3px) rotate(2deg);
-    }
-
-    40% {
-        -webkit-transform: translateX(-3px) rotate(-2deg);
-        transform: translateX(-3px) rotate(-2deg);
-    }
-
-    50% {
-        -webkit-transform: translateX(2px) rotate(1deg);
-        transform: translateX(2px) rotate(1deg);
-    }
-
-    60% {
-        -webkit-transform: translateX(-2px) rotate(-1deg);
-        transform: translateX(-2px) rotate(-1deg);
-    }
-
-    70% {
-        -webkit-transform: translateX(2px) rotate(1deg);
-        transform: translateX(2px) rotate(1deg);
-    }
-
-    80% {
-        -webkit-transform: translateX(-2px) rotate(-1deg);
-        transform: translateX(-2px) rotate(-1deg);
-    }
-
-    90% {
-        -webkit-transform: translateX(1px) rotate(0deg);
-        transform: translateX(1px) rotate(0deg);
-    }
-
-    100% {
-        -webkit-transform: translateX(-1px) rotate(0deg);
-        transform: translateX(-1px) rotate(0deg);
-    }
+.fb-comments {
+    color: #CFCFCF;
+}
+.fbFeedbackPost .composer {
+    color: #CFCFCF !important;
 }
 
-@keyframes hvr-buzz-out {
-    10% {
-        -webkit-transform: translateX(3px) rotate(2deg);
-        transform: translateX(3px) rotate(2deg);
-        text-shadow: 0 0 30px rgba(255,255,255,0.05);
-    }
 
-    20% {
-        -webkit-transform: translateX(-3px) rotate(-2deg);
-        transform: translateX(-3px) rotate(-2deg);
-        text-shadow: 0 0 30px rgba(255,255,255,0.1);
-    }
-
-    30% {
-        -webkit-transform: translateX(3px) rotate(2deg);
-        transform: translateX(3px) rotate(2deg);
-        text-shadow: 0 0 30px rgba(255,255,255,0.1);
-    }
-
-    40% {
-        -webkit-transform: translateX(-3px) rotate(-2deg);
-        transform: translateX(-3px) rotate(-2deg);
-        text-shadow: 0 0 30px rgba(255,255,255,0.1);
-    }
-
-    50% {
-        -webkit-transform: translateX(2px) rotate(1deg);
-        transform: translateX(2px) rotate(1deg);
-        text-shadow: 0 0 30px rgba(255,255,255,0.1);
-    }
-
-    60% {
-        -webkit-transform: translateX(-2px) rotate(-1deg);
-        transform: translateX(-2px) rotate(-1deg);
-        text-shadow: 0 0 30px rgba(255,255,255,0.1);
-    }
-
-    70% {
-        -webkit-transform: translateX(2px) rotate(1deg);
-        transform: translateX(2px) rotate(1deg);
-        text-shadow: 0 0 30px rgba(255,255,255,0.1);
-    }
-
-    80% {
-        -webkit-transform: translateX(-2px) rotate(-1deg);
-        transform: translateX(-2px) rotate(-1deg);
-        text-shadow: 0 0 30px rgba(255,255,255,0.1);
-    }
-
-    90% {
-        -webkit-transform: translateX(1px) rotate(0deg);
-        transform: translateX(1px) rotate(0deg);
-        text-shadow: 0 0 30px rgba(255,255,255,0.05);
-    }
-
-    100% {
-        -webkit-transform: translateX(-1px) rotate(0deg);
-        transform: translateX(-1px) rotate(0deg);
-        text-shadow: 0 0 30px rgba(255,255,255,0);
-    }
+.buttonRow {
+    height: 45px;
+    /*background-color: #fff;*/
+    padding: 0 5px 0 5px;
+    margin: -5px 5px 0 -10px;
+    border-radius: 4px;
 }
-
-.hvr-buzz-out {
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-animation-name: hvr-buzz-out;
-    animation-name: hvr-buzz-out;
-    -webkit-animation-duration: 0.75s;
-    animation-duration: 0.75s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
+.buttonRow .fa-comments {
+    color: #CFCFCF;
+    font-size: 1.5em;
+    margin-left: 4px;
+    margin-top: 4px;
+    text-shadow: 0 0 3px #000;
 }
-
-/*.hvr-buzz-out-glow {
-    -webkit-animation-name: hvr-buzz-out-glow;
-    animation-name: hvr-buzz-out-glow;
-    -webkit-animation-duration: 0.75s;
-    animation-duration: 0.75s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-}*/
-/*
-.hvr-buzz-out-glow-off {
-    -webkit-transition: text-shadow 500ms;
-    -moz-transition: text-shadow 500ms;
-    -ms-transition: text-shadow 500ms;
-    -o-transition: text-shadow 500ms;
-    transition: text-shadow 500ms;
-
-    text-shadow: 0 0 0 rgba(255,255,255,0);
+.buttonRow .fa-picture-o {
+    color: #CFCFCF;
+    font-size: 1.3em;
+    margin-left: 3px;
+    margin-top: 4px;
+    text-shadow: 0 0 3px #000;
 }
-*/
+.buttonRow .fa-file-text-o {
+    color: #CFCFCF;
+    font-size: 1.3em;
+    margin-left: 3px;
+    margin-top: 4px;
+    text-shadow: 0 0 3px #000;
+}
+.buttonRow .fa-comments:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #fff;
+}
+.buttonRow .fa-picture-o:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #fff;
+}
+.buttonRow .fa-file-text-o:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #fff;
+}
+#commentIcon .fa-stack-2x {
+    font-size: 2.4em;
+    color: #472f50;
+}
+#visualIcon .fa-stack-2x {
+    font-size: 2.4em;
+    color: #125020;
+}
+#lyricIcon .fa-stack-2x {
+    font-size: 2.4em;
+    color: #501715;
+}
+#visualIcon {
+    cursor: pointer;
+    margin-right: 15px;
+}
+#commentIcon {
+    cursor: pointer;
+    margin-right: 15px;
+}
+#lyricIcon {
+    cursor: pointer;
+    margin-right: 15px;
+}
+#commentIcon:hover {
+    color: #ffffff;
+}
