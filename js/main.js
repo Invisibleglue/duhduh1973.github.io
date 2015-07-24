@@ -1,7 +1,7 @@
 // Hide animation stage's placeholder image when song is started
 // Un-hide animation
 $('.amplitude-play-pause').on('click', function () {
-    $('#defaultAnim').hide('fade',2000, 'easeOutCubic');
+    $('#albumArt').hide('fade',2000, 'easeOutCubic');
     $('#amplitude-visualization').show('fade', 2000);
 });
 
@@ -208,6 +208,21 @@ $(document).ready(function() {
     });
 });
 
+// Wiggles Landing Page down arrow button on page load (Call to action)
+/*$(document).ready(function() {
+    var wiggleArrow = setInterval(function () {
+        $('#landingDownArrow').toggleClass('hvr-icon-hang');
+    }, 4000);
+
+    function stopWiggleArrow() {
+        clearInterval(wiggleArrow);
+    };
+    // Kill wiggle loop when play button clicked
+    $('#landingDownArrow').click(function () {
+        stopWiggleArrow();
+    });
+});*/
+
 // Wiggles first song in playList (let user know to click)
 $(document).ready(function() {
     //console.log(Amplitude.getSongByIndex({'0': 'name'}));
@@ -225,6 +240,7 @@ $(document).ready(function() {
     });
     $('#fb-comments').animate({'opacity': '0'});
     $('#amplitude-visualization').hide();
+    $('#defaultAnim').hide();
 });
 
 $('#commentIcon').on('click', function () {

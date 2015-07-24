@@ -6,7 +6,7 @@ Amplitude.init({
     "songs": [{
         "name": "Muddy Shoes",
         "url": "http://invisibleglue.com/audio/Muddy%20Shoes.mp3",
-        "cover_art_url": "http://www.invisibleglue.com/images/muddyshoes.jpg"
+        "cover_art_url": "../images/muddyshoes.jpg"
     }, {
         "name": "The Silence Got So Loud",
         "url": "http://invisibleglue.com/audio/The%20Silence%20Got%20So%20Loud.mp3",

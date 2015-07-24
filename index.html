@@ -39,44 +39,34 @@
        	</ul>
        </nav>
 		<section id="home" class="home">
-			<div class="videoCenter">
-				<video id="wayOutSplash" poster="images/landingPoster.jpg" class="embed-responsive-item" preload>
-					<source src="images/WayOutRing_Poster.mp4" type="video/mp4"/>
-				</video>
-			</div>
-			<div class="buttonCenter">
-				<span id="videoPlayPause" class="fa-stack fa-lg">
-				  <i class="fa fa-square fa-stack-2x iconBg"></i>
-				  <i id="videoPpIcon" class="fa fa-play fa-stack-1x fa-inverse"></i>
-				</span>
-				<span id="videoMute" class="fa-stack fa-lg">
-				  <i class="fa fa-square fa-stack-2x iconBg"></i>
-				  <i id="videoMuteIcon" class="fa fa-volume-off fa-stack-1x fa-inverse"></i>
-				</span>
-				<span id="fullScreen" class="fa-stack fa-lg">
-				  <i class="fa fa-square fa-stack-2x iconBg"></i>
-				  <i class="glyphicon glyphicon-fullscreen fa-stack-1x fa-inverse"></i>
-				</span>
-				<div class="progressBar">
-					<div class="timeBar"></div>
-					<div class="bufferBar"></div>
-				</div>
+            <div class="videoCenter">
+                <video id="wayOutSplash" poster="images/landingPoster.jpg" class="embed-responsive-item" preload>
+                    <source src="images/WayOutRing_Poster.mp4" type="video/mp4"/>
+                </video>
+            </div>
+            <div class="buttonCenter">
+                <span id="videoPlayPause" class="fa-stack fa-lg">
+                  <i class="fa fa-square fa-stack-2x iconBg"></i>
+                  <i id="videoPpIcon" class="fa fa-play fa-stack-1x fa-inverse"></i>
+                </span>
+                <span id="videoMute" class="fa-stack fa-lg">
+                  <i class="fa fa-square fa-stack-2x iconBg"></i>
+                  <i id="videoMuteIcon" class="fa fa-volume-off fa-stack-1x fa-inverse"></i>
+                </span>
+                <span id="fullScreen" class="fa-stack fa-lg">
+                  <i class="fa fa-square fa-stack-2x iconBg"></i>
+                  <i class="glyphicon glyphicon-fullscreen fa-stack-1x fa-inverse"></i>
+                </span>
+                <div class="progressBar">
+                    <div class="timeBar"></div>
+                    <div class="bufferBar"></div>
+                </div>
+            </div>
+            <div class="landingDownArrow">
+                <a href="#music"><i id="landingDownArrow" class="fa fa-angle-double-down fa-3x hvr-icon-hang"></i>
+                </a>
 
-				<!--<span id="btnLight" class="on fa-stack fa-lg">
-					<i class="fa fa-square fa-stack-2x iconBg"></i>
-				  	<i id="btnLightIcon" class="fa fa-lightbulb-o fa-stack-1x fa-inverse"></i>
-				</span>
-				<div class="progressTime">
-					Current play time: <span class="current"></span>
-					Video duration: <span class="duration"></span>
-				</div>
-
-				<!--<span id="videoBack" class="fa-stack fa-lg">
-				  <i class="fa fa-square fa-stack-2x"></i>
-				  <i class="fa fa-step-backward fa-stack-1x fa-inverse"></i>
-				</span>-->
-			</div>
-
+            </div>
 		</section>
 
 	   	<section id="music" class="music">
@@ -85,7 +75,7 @@
 					<div class="playAnim col-xs-8 col-sm-8 col-md-8 col-lg-8">
 						<div class="slimScrollTestDiv">
 						<img id="defaultAnim" class="visualizerImage" amplitude-song-info="cover">
-						<!--<img id="defaultAnim" src="images/landingPoster.jpg" class="visualizerImage" alt="Invisible Glue">-->
+						<img id="albumArt" src="images/albumAbstract-red.png" class="img-rounded defaultArt" alt="Invisible Glue">
 						<div id="amplitude-visualization"></div>
 						<div id="fb-comments" class="fb-comments" data-colorscheme="dark" data-href="http://localhost:63343/BootSnippetTest/index.html" data-version="v2.4" data-width="750px" data-numposts="25"></div>
 
