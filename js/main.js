@@ -256,13 +256,13 @@ $(function(){
 });
 
 // Facebook Share Button Function: Loads meta tags (specific for each song) into the head of index.html
-$('#fb-muddy').on("click", function() {
-    $('head').load('songData.html .muddy-meta');
+$('.playList #fb-muddy').on("click", function() {
+    $('head').load('songData.html');
 
     FB.ui(
         {
             method: 'share',
-            href: 'http://www.invisibleglue.com/music-new.html',
+            href: 'http://localhost:63343/BootSnippetTest/index.html',
             action_type: 'og.likes',
         },
         // callback
