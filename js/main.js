@@ -255,6 +255,27 @@ $(function(){
     });
 });
 
+// Facebook Share Button Function: Loads meta tags (specific for each song) into the head of index.html
+$('#fb-muddy').on("click", function() {
+    $('head').load('songData.html .muddy-meta');
+
+    FB.ui(
+        {
+            method: 'share',
+            href: 'http://www.invisibleglue.com/music-new.html',
+            action_type: 'og.likes',
+        },
+        // callback
+        function(response) {
+            if (response && !response.error_code) {
+                alert('Posting completed.');
+            } else {
+                alert('Error while posting.');
+            }
+        }
+    );
+});
+
 /*$('#lyricIcon').on('click', function () {
     $('.amplitude-visualization').hide('fade', 2000);
     $('#defaultAnim').hide('fade', 2000, function () {
