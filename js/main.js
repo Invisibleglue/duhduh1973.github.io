@@ -262,7 +262,7 @@ $('.playList #fb-muddy').on("click", function() {
     FB.ui(
         {
             method: 'share',
-            href: 'http://localhost:63343/BootSnippetTest/index.html',
+            href: 'http://duhduh1973.github.io/',
             action_type: 'og.likes',
         },
         // callback
