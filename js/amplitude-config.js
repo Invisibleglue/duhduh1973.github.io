@@ -37,7 +37,7 @@ Amplitude.init({
         "name": "Shadow Shapes",
         "url": "http://invisibleglue.com/audio/Shadow%20Shapes.mp3"
     }],
-    "default_album_art": "$../images/landingPoster.jpg",
+    "default_album_art": "../images/landingPoster.jpg",
     "visualization_backup": "album-art",
     "debug": true,
     "callbacks": {
@@ -84,6 +84,7 @@ function active_play (){
 }
 function active_pause (){
     var $ = jQuery;
+    $('#defaultAnim').show('fade', 1000);
     $('#playIcon').removeClass('fa-pause').addClass('fa-play');
     //noinspection JSJQueryEfficiency
     $playLi.not('.amplitude-active-song-container').removeClass('activeSong');

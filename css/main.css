@@ -649,6 +649,17 @@ input[type=range]:focus::-ms-fill-upper {
 
 .fb-comments {
     color: #CFCFCF;
+    margin-left: -15px !important;
+}
+.slimScrollDiv {
+    margin-right: 0 !important;
+}
+.slimScrollBar {
+    background: #1f0104 !important;
+    /*opacity: 1 !important;*/
+}
+.slimScrollBar, .slimScrollRail {
+    width: 12px !important;
 }
 .fbFeedbackPost .composer {
     color: #CFCFCF !important;
@@ -683,6 +694,13 @@ input[type=range]:focus::-ms-fill-upper {
     margin-top: 4px;
     text-shadow: 0 0 3px #000;
 }
+.buttonRow .fa-file-video-o {
+    color: #CFCFCF;
+    font-size: 1.3em;
+    margin-left: 3px;
+    margin-top: 4px;
+    text-shadow: 0 0 3px #000;
+}
 .buttonRow .fa-comments:hover {
     color: #ffffff;
     text-shadow: 0 0 8px #fff;
@@ -692,6 +710,10 @@ input[type=range]:focus::-ms-fill-upper {
     text-shadow: 0 0 8px #fff;
 }
 .buttonRow .fa-file-text-o:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #fff;
+}
+.buttonRow .fa-file-video-o:hover {
     color: #ffffff;
     text-shadow: 0 0 8px #fff;
 }
@@ -707,6 +729,10 @@ input[type=range]:focus::-ms-fill-upper {
     font-size: 2.4em;
     color: #501715;
 }
+#imageIcon .fa-stack-2x {
+    font-size: 2.4em;
+    color: #7e7b0d;
+}
 #visualIcon {
     cursor: pointer;
     margin-right: 15px;
@@ -719,6 +745,13 @@ input[type=range]:focus::-ms-fill-upper {
     cursor: pointer;
     margin-right: 15px;
 }
+#imageIcon {
+    cursor: pointer;
+    margin-right: 15px;
+}
 #commentIcon:hover {
+    color: #ffffff;
+}
+#imageIcon:hover {
     color: #ffffff;
 }

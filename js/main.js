@@ -1,6 +1,8 @@
 // Hide animation stage's placeholder image when song is started
+// Un-hide animation
 $('.amplitude-play-pause').on('click', function () {
     $('#defaultAnim').hide('fade',2000, 'easeOutCubic');
+    $('#amplitude-visualization').show('fade', 2000);
 });
 
 /*********************************************************/
@@ -208,7 +210,7 @@ $(document).ready(function() {
 
 // Wiggles first song in playList (let user know to click)
 $(document).ready(function() {
-    console.log(Amplitude.getSongByIndex({'0': 'name'}));
+    //console.log(Amplitude.getSongByIndex({'0': 'name'}));
 
     var wiggleSong = setInterval(function () {
         $('#wiggleSongID').toggleClass('hvr-icon-wobble-horizontal');
@@ -221,27 +223,44 @@ $(document).ready(function() {
     $('#wiggleSongID').click(function () {
         stopWiggleSong();
     });
-    $('.fb-comments').hide();
+    $('#fb-comments').animate({'opacity': '0'});
+    $('#amplitude-visualization').hide();
 });
 
 $('#commentIcon').on('click', function () {
+    $('#amplitude-visualization').hide('fade', 2000);
     $('#defaultAnim').hide('fade', 2000);
-    $('.amplitude-visualization').hide('fade', 2000, function () {
-        //$('#fb-comments').show('fade', 2000);
-    });
+    $('#fb-comments').animate({'opacity': '1'});
 });
 $('#visualIcon').on('click', function () {
-    $('#fb-comments').hide('fade', 2000);
+    $('#fb-comments').animate({'opacity': '0'}, 2000);
+    $('#defaultAnim').hide('fade', 2000);
+    $('#amplitude-visualization').show('fade',2000);
+});
+$('#imageIcon').on('click', function () {
+    $('#amplitude-visualization').hide('fade', 2000);
+    $('#fb-comments').animate({'opacity': '0'}, 2000);
+    $('#defaultAnim').show('fade', 2000);
+
+});
+
+$(function(){
+    $('.slimScrollTestDiv').slimScroll({
+        height: 'auto',
+        width: 'auto',
+        //alwaysVisible: true,
+        railVisible: true,
+        railColor: '#000000',
+        railOpacity: '0.2'
+    });
+});
+
+/*$('#lyricIcon').on('click', function () {
+    $('.amplitude-visualization').hide('fade', 2000);
     $('#defaultAnim').hide('fade', 2000, function () {
     $('.amplitude-visualization').show('fade', 2000);
     });
-});
-$('#lyricIcon').on('click', function () {
-    $('.amplitude-visualization').hide('fade', 2000);
-    //$('#defaultAnim').hide('fade', 2000, function () {
-    //$('.amplitude-visualization').show('fade', 2000);
-    //});
-});
+});*/
 
 
 
