@@ -17,18 +17,17 @@
 	</head>
 	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
+	<!--<script>(function(d, s, id) {
 		var js, fjs = d.getElementsByTagName(s)[0];
 		if (d.getElementById(id)) return;
 		js = d.createElement(s); js.id = id;
 		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=1564949173777685";
 		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+	}(document, 'script', 'facebook-jssdk'));</script>-->
 
 
        <nav class="navbar navbar-inverse navbar-fixed-top page-scroll">
        	<a class="navbar-brand page-scroll" href="#page-top"><h4 class="logo">invisible glue</h4></a>
-		   <h5 id="result"></h5>
        	<ul class="nav navbar-nav navbar-right">
        		<li>
 				<a class="page-scroll" href="#music">MUSIC</a>
@@ -63,22 +62,20 @@
                 </div>
             </div>
             <div class="landingDownArrow">
-                <a href="#music"><i id="landingDownArrow" class="fa fa-angle-double-down fa-3x hvr-icon-hang"></i>
+                <a class="page-scroll" href="#music"><i id="landingDownArrow" class="fa fa-angle-double-down fa-3x hvr-icon-hang"></i>
                 </a>
 
             </div>
 		</section>
-
 	   	<section id="music" class="music">
 			<div class="container">
 				<div class="row musicBox">
 					<div class="playAnim col-xs-8 col-sm-8 col-md-8 col-lg-8">
 						<div class="slimScrollTestDiv">
-						<img id="defaultAnim" class="visualizerImage" amplitude-song-info="cover">
-						<img id="albumArt" src="images/albumAbstract-red.png" class="img-rounded defaultArt" alt="Invisible Glue">
-						<div id="amplitude-visualization"></div>
-						<div id="fb-comments" class="fb-comments" data-colorscheme="dark" data-href="http://localhost:63343/BootSnippetTest/index.html" data-version="v2.4" data-width="750px" data-numposts="25"></div>
-
+                            <img id="albumArt" class="img-rounded albumArt" src="images/albumAbstract-red.png" alt="Invisible Glue">
+						    <img id="songArt" class="songArt" amplitude-song-info="cover">
+						    <div id="amplitude-visualization"></div>
+						    <div id="fb-comments" class="fb-comments" data-colorscheme="dark" data-href="http://localhost:63343/BootSnippetTest/index.html" data-version="v2.4" data-width="750px" data-numposts="25"></div>
 						</div>
 					</div>
 					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 gutter">
@@ -322,6 +319,13 @@
 						<i class="fa fa-square fa-stack-2x"></i>
 						<i class="fa fa-picture-o fa-stack-1x fa-inverse"></i>
 						</span>
+                        <span id="testIcon" class="fa-stack fa-lg pull-left" title="Covert Art">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-picture-o fa-stack-1x fa-inverse"></i>
+						</span>
+                        <span class="consoleTest">
+                            <h5>The active song's <code>&lt;audio&gt;</code> tag lives here!</h5>
+                        </span>
 					</div>
 				</div>
 			</div>

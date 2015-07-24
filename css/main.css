@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:900);
 @font-face {
     font-family: 'digital-7mono';
     src: url('fonts/digital-7_mono-webfont.eot');
@@ -8,6 +9,19 @@
     url('fonts/digital-7_mono-webfont.svg#digital-7mono') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+@font-face {
+    font-family: 'final_frontier_old_styleRg', serif;
+    src: url('fonts/finalold-webfont.eot');
+    src: url('fonts/finalold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/finalold-webfont.woff2') format('woff2'),
+    url('fonts/finalold-webfont.woff') format('woff'),
+    url('fonts/finalold-webfont.ttf') format('truetype'),
+    url('fonts/finalold-webfont.svg#finaloldIt') format('svg');
+    font-weight: 800;
+    font-style: italic;
+    /*font-stretch: ultra-condensed;*/
+
 }
 
 @media (max-width: 862px) {
@@ -54,14 +68,16 @@
 
     h4.logo {
         margin-left: 100px;
-        font-family: 'Alfa Slab One', cursive;
-        font-size: 30px;
+        /*width: 500px;*/
+        font-family: 'final_frontier_old_styleRg';
+        line-height: 70%;
+        /*letter-spacing: 3px;*/
+        font-size: 3em;
         text-transform: uppercase;
-        -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), color-stop(50%, rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, 1)));
-        margin-top: -6px;
-        color: #666;
+        -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), color-stop(40%, rgba(0, 0, 0, .1)), to(rgba(0, 0, 0, 1)));
+        margin-top: 0px;
+        color: rgba(91, 100, 255, 0.3);
         text-shadow: 0 1px 0 #CCCCCC;
-
     }
 
     .musicBox {
@@ -129,9 +145,6 @@
     /*}*/
     .playlistTitle {
         flex: 2 1 content;
-    }
-    #defaultAnim {
-        /*z-index: 10;*/
     }
     .social {
         color: #CFCFCF;
@@ -249,10 +262,6 @@
         background-color: #222 !important;
     }
 
-    #amplitude-visualization {
-        overflow: hidden;
-    }
-
     .transport {
         flex: 0 1 auto;
         /*padding: 8px;*/
@@ -359,14 +368,15 @@
         font-size: 1.3em;
         margin-top: .06em;
     }
-    .landingDownArrow {
+    .landingDownArrow a{
         width: 100%;
         height: 50%;
         margin-top: 30px;
         font-size: 2.2em;
-        color: #ffffff;
-        text-shadow: 1px 1px 3px #000;
-        opacity: 0.3;
+        color: rgba(0,0,0,0.9);
+        text-shadow: 2px 2px 3px rgba(255,255,255,0.3);
+        opacity: .9;
+
     }
     .footer {
         display: flex;
@@ -390,15 +400,26 @@
         /*visibility: hidden;*/
     }
 
-    .visualizerImage {
+    .songArt {
         min-width: 100%;
-        padding: 0 !important;
-        margin-right: -5px !important;
-        z-index: 999;
+        /*padding: 0 !important;*/
+        /*margin-right: -5px !important;*/
+        z-index: 12;
+        position: absolute;
+        left: 0;
+        top: 0;
     }
-    .defaultArt {
+    .albumArt {
         width: 100%;
         border-radius: 4px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 13;
+    }
+    #amplitude-visualization {
+        overflow: hidden;
+        z-index: 10;
     }
     .lyric {
         color: #CFCFCF;
@@ -769,3 +790,10 @@ input[type=range]:focus::-ms-fill-upper {
 #imageIcon:hover {
     color: #ffffff;
 }
+
+
+.consoleTest h5 {
+    color: #000;
+    background-color: #fff;
+}
+

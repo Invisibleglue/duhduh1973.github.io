@@ -6,7 +6,7 @@ Amplitude.init({
     "songs": [{
         "name": "Muddy Shoes",
         "url": "http://invisibleglue.com/audio/Muddy%20Shoes.mp3",
-        "cover_art_url": "../images/muddyshoes.jpg"
+        "cover_art_url": "http://localhost:63342/BootSnippetTest/images/muddyshoes.jpg"
     }, {
         "name": "The Silence Got So Loud",
         "url": "http://invisibleglue.com/audio/The%20Silence%20Got%20So%20Loud.mp3",
@@ -65,12 +65,16 @@ function after_end (){
         $footerTop.stop().animate({bottom: "0"}, 10);
     }, 6000);
 }
-var $playLi = $('.playList li');
+
+
 
 function active_play (){
     var $ = jQuery;
+    var $playLi = $('.playList li');
     var $ampActive = $('.amplitude-active-song-container');
 
+
+    $('#albumArt').hide('fade', 1000);
     $('#playIcon').removeClass('fa-play').addClass('fa-pause');
     $ampActive.fadeTo(200, 1).addClass('activeSong', 200, "easeInOutQuad").find('i.fa:eq(0)').addClass('fa-rotate-90');
     $playLi.find('.playlistTitle').fadeTo(400, 1);
@@ -84,7 +88,9 @@ function active_play (){
 }
 function active_pause (){
     var $ = jQuery;
-    $('#defaultAnim').show('fade', 1000);
+    var $playLi = $('.playList li');
+
+    $('#albumArt').show('fade', 4000, 'easeInQuad');
     $('#playIcon').removeClass('fa-pause').addClass('fa-play');
     //noinspection JSJQueryEfficiency
     $playLi.not('.amplitude-active-song-container').removeClass('activeSong');

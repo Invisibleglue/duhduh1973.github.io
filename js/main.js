@@ -1,18 +1,26 @@
 // Hide animation stage's placeholder image when song is started
 // Un-hide animation
-$('.amplitude-play-pause').on('click', function () {
-    $('#albumArt').hide('fade',2000, 'easeOutCubic');
-    $('#amplitude-visualization').show('fade', 2000);
-});
+
+/*$(document).ready(function () {
+    $('.playList').on('click', function () {
+        $('#albumArt').hide('fade',1000).next('#songArt').delay(2500).hide('fade', 1500);
+        $('.playList').off('click');
+    });
+});*/
+
 
 /*********************************************************/
 //              Footer show/hide functions               //
 /*********************************************************/
 var footerTimer;
-// Show footer on first song click
-$('.playList li').on('click', function () {
-    $('.footer').animate({bottom: "0px"}, 1000);
+// Move footer-top hotspot on first song click
+$('.playList').one('click', function () {
     $('.footerTopMouseCatch').animate({bottom: "0px"}, 1000);
+    $('#albumArt').hide('fade',1000).next('#songArt').delay(2500).hide('fade', 1500);
+});
+// Show footer on play event
+$('.playList').on('click', function () {
+    $('.footer').animate({bottom: "0px"}, 1000);
 
 // Delay to auto-hide footer on inactivity
     footerTimer = setTimeout(function () {
@@ -208,6 +216,7 @@ $(document).ready(function() {
     });
 });
 
+
 // Wiggles Landing Page down arrow button on page load (Call to action)
 /*$(document).ready(function() {
     var wiggleArrow = setInterval(function () {
@@ -239,27 +248,29 @@ $(document).ready(function() {
         stopWiggleSong();
     });
     $('#fb-comments').animate({'opacity': '0'});
-    $('#amplitude-visualization').hide();
-    $('#defaultAnim').hide();
+    //$('#amplitude-visualization').hide();
+    //$('#songArt').hide();
 });
 
 $('#commentIcon').on('click', function () {
-    $('#amplitude-visualization').hide('fade', 2000);
-    $('#defaultAnim').hide('fade', 2000);
+    $('#amplitude-visualization').hide('fade', 750);
+    $('#songArt').hide('fade', 750);
     $('#fb-comments').animate({'opacity': '1'});
 });
 $('#visualIcon').on('click', function () {
-    $('#fb-comments').animate({'opacity': '0'}, 2000);
-    $('#defaultAnim').hide('fade', 2000);
-    $('#amplitude-visualization').show('fade',2000);
+    //$('#fb-comments').animate({'opacity': '0'}, 750);
+    $('#songArt').hide('fade', 750);
+    //$('#amplitude-visualization').show('fade',2000);
 });
 $('#imageIcon').on('click', function () {
-    $('#amplitude-visualization').hide('fade', 2000);
-    $('#fb-comments').animate({'opacity': '0'}, 2000);
-    $('#defaultAnim').show('fade', 2000);
+    $('#amplitude-visualization').hide('fade', 750);
+    $('#fb-comments').animate({'opacity': '0'}, 750);
+    $('#songArt').show('fade', 2000);
 
 });
 
+
+// Custom scrollbar for Animation Stage - mainly for when Facebook Comments are visible
 $(function(){
     $('.slimScrollTestDiv').slimScroll({
         height: 'auto',
@@ -291,13 +302,6 @@ $('.playList #fb-muddy').on("click", function() {
         }
     );
 });
-
-/*$('#lyricIcon').on('click', function () {
-    $('.amplitude-visualization').hide('fade', 2000);
-    $('#defaultAnim').hide('fade', 2000, function () {
-    $('.amplitude-visualization').show('fade', 2000);
-    });
-});*/
 
 
 
