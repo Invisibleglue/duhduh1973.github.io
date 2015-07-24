@@ -259,7 +259,7 @@ $(function(){
 $('.playList #fb-muddy').on("click", function() {
     $('head').load('songData.html');
 
-    FB.ui(
+/*    FB.ui(
         {
             method: 'share',
             href: 'http://duhduh1973.github.io/',
@@ -273,7 +273,7 @@ $('.playList #fb-muddy').on("click", function() {
                 alert('Error while posting.');
             }
         }
-    );
+    );*/
 });
 
 /*$('#lyricIcon').on('click', function () {
