@@ -54,11 +54,13 @@
         padding: 0 !important;
     }
 
-    h4 a {
+    #homeLink {
         color: #CFCFCF;
-        font-size: 3em;
+        font-size: 2em;
 
-        font-family: 'federationclassic', serif;
+        font-family: "hwt-american-shopworn",sans-serif;
+        font-style: normal;
+        font-weight: 900;
     }
 
     .musicBox {
