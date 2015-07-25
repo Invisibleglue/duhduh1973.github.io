@@ -1,27 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web:900);
 @font-face {
-    font-family: 'digital-7mono';
-    src: url('fonts/digital-7_mono-webfont.eot');
-    src: url('fonts/digital-7_mono-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/digital-7_mono-webfont.woff2') format('woff2'),
-    url('fonts/digital-7_mono-webfont.woff') format('woff'),
-    url('fonts/digital-7_mono-webfont.ttf') format('truetype'),
-    url('fonts/digital-7_mono-webfont.svg#digital-7mono') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'final_frontier_old_styleRg', serif;
-    src: url('fonts/finalold-webfont.eot');
-    src: url('fonts/finalold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/finalold-webfont.woff2') format('woff2'),
-    url('fonts/finalold-webfont.woff') format('woff'),
-    url('fonts/finalold-webfont.ttf') format('truetype'),
-    url('fonts/finalold-webfont.svg#finaloldIt') format('svg');
-    font-weight: 800;
-    font-style: italic;
-    /*font-stretch: ultra-condensed;*/
-
+    font-family: 'federationclassic';
+    src: url('fonts/fec_____-webfont.eot');
+    src: url('fonts/fec_____-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/fec_____-webfont.woff2') format('woff2'),
+    url('fonts/fec_____-webfont.woff') format('woff'),
+    url('fonts/fec_____-webfont.ttf') format('truetype'),
+    url('fonts/fec_____-webfont.svg#federationclassicregular') format('svg');
 }
 
 @media (max-width: 862px) {
@@ -65,19 +50,15 @@
         margin-right: 100px;
         font-weight: 600;
     }
+    .navbar-brand {
+        padding: 0 !important;
+    }
 
-    h4.logo {
-        margin-left: 100px;
-        /*width: 500px;*/
-        font-family: 'final_frontier_old_styleRg';
-        line-height: 70%;
-        /*letter-spacing: 3px;*/
+    h4 a {
+        color: #CFCFCF;
         font-size: 3em;
-        text-transform: uppercase;
-        -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), color-stop(40%, rgba(0, 0, 0, .1)), to(rgba(0, 0, 0, 1)));
-        margin-top: 0px;
-        color: rgba(91, 100, 255, 0.3);
-        text-shadow: 0 1px 0 #CCCCCC;
+
+        font-family: 'federationclassic', serif;
     }
 
     .musicBox {

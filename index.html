@@ -12,8 +12,11 @@
 			  rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/main.css"/>
-		<link rel="stylesheet" href="css/scrollingNavbar.css"/>
+        <link rel="stylesheet" href="css/scrollingNavbar.css"/>
 		<link rel="stylesheet" href="css/hovers.css"/>
+        <!-- TypeKit -->
+        <script src="//use.typekit.net/vtv2oct.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
 	</head>
 	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 	<div id="fb-root"></div>
@@ -27,7 +30,11 @@
 
 
        <nav class="navbar navbar-inverse navbar-fixed-top page-scroll">
-       	<a class="navbar-brand page-scroll" href="#page-top"><h4 class="logo">invisible glue</h4></a>
+           <div class="navbar-brand">
+               <h4 class="page-scroll">
+                   <a id="homeLink" href="#page-top">invisible glue</a>
+               </h4>
+           </div>
        	<ul class="nav navbar-nav navbar-right">
        		<li>
 				<a class="page-scroll" href="#music">MUSIC</a>
@@ -384,6 +391,7 @@
 		<script src="https://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 		<!-- Bootstrap JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="http://mrnix.ru/pxgradient/pxgradient-1.0.3.js"></script>
 		<!-- Custom Scripts -->
 	    <script src="js/amplitude.js"></script>
 	    <script src="js/michaelbromley.js"></script>

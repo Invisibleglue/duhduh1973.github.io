@@ -303,8 +303,6 @@ $('.playList #fb-muddy').on("click", function() {
     );
 });
 
-
-
 /*
 $('#btnLight').click(function() {
     if($(this).hasClass('on')) {
