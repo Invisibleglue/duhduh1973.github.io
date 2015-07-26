@@ -4,23 +4,25 @@
 The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
 of those sections to manage the look and feel of the site. */
 
-/*noinspection CssOptimizeSimilarProperties*/
 .home {
     height: 100%;
-    padding-top: 70px;
+    /*padding-top: 70px;*/
     text-align: center;
+    /*background: transparent url('../images/ImageSequence/200.jpg') 0 0 no-repeat;*/
 
-
-    background:
+    /*background:
     radial-gradient(black 15%, transparent 16%) 0 0,
     radial-gradient(black 15%, transparent 16%) 8px 8px,
     radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
     radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
     background-color: #101010;
-    background-size:16px 16px;
+    background-size:16px 16px;*/
 }
-.imgTest {
-
+.landingPageContainer {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
 }
 
 .music {

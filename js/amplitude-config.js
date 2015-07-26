@@ -36,6 +36,9 @@ Amplitude.init({
     }, {
         "name": "Shadow Shapes",
         "url": "http://invisibleglue.com/audio/Shadow%20Shapes.mp3"
+    },{
+        "name": "WayOutLowsGone",
+        "url": "AudioVideo/WayOutLowsGone.mp3"
     }],
     "default_album_art": "../images/landingPoster.jpg",
     "visualization_backup": "album-art",
